@@ -1,5 +1,5 @@
 # Feather Wiki Deutsch
-Die Übersetzung besteht/bestand darin eine de.yml im Ordner /rails/config/locales/ zu erzeugen und in's Deutsche zu übersetzen.
+Die Übersetzung besteht/bestand darin, eine de-DE.json im Ordner /locales zu erzeugen und in's Deutsche zu übersetzen.
 Für den schnellen Überblick hier die original README in deutscher Sprache. 
 
 
