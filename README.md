@@ -1,6 +1,11 @@
-# Feather Wiki
+# Feather Wiki Deutsch
+Die Übersetzung besteht/bestand darin eine de.yml im Ordner /rails/config/locales/ zu erzeugen und in's Deutsche zu übersetzen.
+Für den schnellen Überblick hier die original README in deutscher Sprache. 
 
-A 58.163 kilobyte [quine](https://en.wikipedia.org/wiki/Quine_(computing)) for creating simple, self-contained wikis. The idea is that it's like [TiddlyWiki](https://tiddlywiki.com) but as small as possible.
+
+## Feather Wiki
+
+Ein 58,163 Kilobyte kleines [quine](https://en.wikipedia.org/wiki/Quine_(computing)) zum Erstellen einfacher, in sich geschlossener Wikis. Die Idee dahinter ist, dass es wie [TiddlyWiki](https://tiddlywiki.com) funktioniert, aber so klein wie möglich ist.
 
 Check out the [Documentation](https://feather.wiki) to see it in action and learn how to use it!
 
