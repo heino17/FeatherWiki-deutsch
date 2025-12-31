@@ -69,9 +69,7 @@ So richtest DU Deinen Computer für die Entwicklung ein:
 
 Wenn Du bereit bist zu bauen, verwende einfach `npm run build`, um Feather Wiki zu erstellen.
 
-To test a build, you can use `npm test` to build and serve the Server build on a local http server. The test script will allow
-Feather Wiki to use the "Save Wiki to Server" button—the output gets saved to `develop/put-save.html` if you need
-to check it.
+Um einen Build zu testen, kannst du mit `npm test` den Server-Build erstellen und auf einem lokalen HTTP-Server bereitstellen. Das Testskript ermöglicht es Feather Wiki, die Schaltfläche "Wiki auf Server speichern" zu verwenden – die Ausgabe wird in `develop/put-save.html` gespeichert, falls du sie überprüfen möchtest.
 
 ### Einzelheiten
 
