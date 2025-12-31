@@ -7,16 +7,16 @@ Für den schnellen Überblick hier die original README in deutscher Sprache.
 
 Ein 58,163 Kilobyte kleines [quine](https://en.wikipedia.org/wiki/Quine_(computing)) zum Erstellen einfacher, in sich geschlossener Wikis. Die Idee dahinter ist, dass es wie [TiddlyWiki](https://tiddlywiki.com) funktioniert, aber so klein wie möglich ist.
 
-Check out the [Documentation](https://feather.wiki) to see it in action and learn how to use it!
+Schau Dir die [Dokumentation](https://feather.wiki) an, um zu verstehen, wie es funktioniert und zu lernen, wie man es verwendet!
 
-## Browser Compatibility
+## Browser-Kompatibilität
 
-Feather Wiki will only run on browsers that support [ECMAScript 2015](https://caniuse.com/es6) (also known as ES6) features.
+Feather Wiki läuft nur auf Browsern, die die Funktionen von [ECMAScript 2015](https://caniuse.com/es6) (auch bekannt als ES6) unterstützen.
 
 <details>
-<summary>👨‍💻 Technical Talk: Supported Browsers</summary>
+<summary>👨‍💻 Technischer Hinweis: Unterstützte Browser</summary>
 
-According to [this ECMAScript compatibility table](https://compat-table.github.io/compat-table/es6/), the following browser versions should definitely be able to run Feather Wiki version 1.3.0 and up without issues:
+Laut [dieser ECMAScript-Kompatibilitätstabelle](https://compat-table.github.io/compat-table/es6/) sollten die folgenden Browserversionen Feather Wiki Version 1.3.0 und höher definitiv ohne Probleme ausführen können:
 
 - Chrome 86+
 - Edge 87+
@@ -27,31 +27,31 @@ According to [this ECMAScript compatibility table](https://compat-table.github.i
 - Safari 13+
 - Samsung Internet for Android 12+
 
-The chart linked above is incomplete, so if your browser is older than any of these, you _might_ still be able to run Feather Wiki, but you'll have to check yourself if it supports [features from ECMAScript 2015](https://caniuse.com/es6).
+Die oben verlinkte Tabelle ist unvollständig. Wenn Dein Browser älter als einer der aufgeführten ist, kannst Du Feather Wiki _möglicherweise_ dennoch ausführen, müsst jedoch selbst überprüfen, ob er die [Funktionen von ECMAScript 2015](https://caniuse.com/es6) unterstützt.
 
 </details>
 
-### Server-Saving
+### Server-Speichern
 
-Feather Wiki includes code for saving to web servers that are set up in a particular way. It expects a `dav` header with any value to be returned by an `OPTIONS` call to the server at the same address as the Feather Wiki file is served. If the server looks compatible, Feather Wiki will display a "Save Wiki to Server" button above a "Save Wiki Locally" button.
+Feather Wiki enthält Code zum Speichern auf Webservern, die auf eine bestimmte Weise eingerichtet sind. Es erwartet einen `dav`-Header mit einem beliebigen Wert, der von einem `OPTIONS`-Aufruf an den Server unter derselben Adresse zurückgegeben wird, unter der die Feather Wiki-Datei bereitgestellt wird. Wenn der Server kompatibel erscheint, zeigt Feather Wiki über der Schaltfläche "Wiki lokal speichern" die Schaltfläche "Wiki auf Server speichern" an.
 
-When the user clicks the "Save Wiki to Server" button, Feather Wiki will send a `PUT` request to the server with a body that contains the full HTML output of the Feather Wiki file that would normally be downloaded to the computer. If you want password protection on your wiki (and I think you _should_), then you'll need to implement that in a way that the server can understand, whether by having the user log in on a different page and saving to a domain cookie or by using basic HTTP auth—the choice is yours.
+Wenn der Benutzer auf die Schaltfläche "Wiki auf Server speichern" klickt, sendet Feather Wiki eine `PUT`-Anfrage an den Server mit einem Textkörper, der die vollständige HTML-Ausgabe der Feather Wiki-Datei enthält, die normalerweise auf den Computer heruntergeladen würde. Wenn Du Dein Wiki mit einem Passwortschutz versehen möchtest (und ich denke, das _solltest_ Du auch), musst Du dies auf eine Weise umsetzen, die der Server verstehen kann, sei es, indem sich der Benutzer auf einer anderen Seite anmeldet und in einem Domain-Cookie gespeichert wird, oder indem Du die grundlegende HTTP-Authentifizierung verwendest – die Wahl liegt bei Dir.
 
-After sending to the server, Feather Wiki expects either a success or failed response with an optional text message as the body to explain a failure. If not text is returned in the response body on a failure, it will simply display the status code in a message box, eg. "Save Failed! Status 403." On success, Feather Wiki will display "Saved."
+Nach dem Senden an den Server erwartet Feather Wiki entweder eine erfolgreiche oder eine fehlgeschlagene Antwort mit einer optionalen Textnachricht als Hauptteil, um einen Fehler zu erklären. Wenn bei einem Fehler kein Text im Hauptteil der Antwort zurückgegeben wird, wird lediglich der Statuscode in einem Meldungsfeld angezeigt, z. B. "Speichern fehlgeschlagen! Status 403". Bei Erfolg zeigt Feather Wiki "Gespeichert" an.
 
-You can see this functionality on [Tiddlyhost](https://tiddlyhost.com) or by using a [self-hosted nest](https://codeberg.org/Alamantus/FeatherWiki/src/branch/main/nests) from this repository!
+Du kannst diese Funktion auf [Tiddlyhost](https://tiddlyhost.com) oder mithilfe eines [selbst gehosteten Nestes](https://codeberg.org/Alamantus/FeatherWiki/src/branch/main/nests) aus diesem Repository ausprobieren!
 
-## Plumage & Bones
+## Federnkleid & Grundgerüst
 
-Feather Wiki's CSS and JavaScript files are available separately from the full HTML, but it is important to note that the JavaScript currently expects both its code and the CSS to be _on the HTML page_ that is loaded _in full_ in order to save! Specifically, the contents of the `.js` file _must_ be in the HTML output inside of a `<script id="a">` script tag with the id as specified (`a`), and the contents of the `.css` _must_ be in the HTML output inside of a `<script id="s">` style tag with the id as specified (`s`). If you don't need to save your wiki, then you don't need to do this.
+Die CSS- und JavaScript-Dateien von Feather Wiki sind separat vom vollständigen HTML verfügbar, aber es ist wichtig zu beachten, dass JavaScript derzeit erwartet, dass sowohl sein Code als auch das CSS _auf der HTML-Seite_ vorhanden sind, die vollständig geladen ist, um gespeichert zu werden! Insbesondere muss der Inhalt der `.js`-Datei in der HTML-Ausgabe innerhalb eines `<script id="a">`-Skript-Tags mit der angegebenen ID (`a`) stehen, und der Inhalt der `.css`-Datei muss in der HTML-Ausgabe innerhalb eines `<script id="s">`-Style-Tags mit der angegebenen ID (`s`) stehen. Wenn Du Dein Wiki nicht speichern musst, musst Du dies nicht tun.
 
-## Contribution
+## Beitragen
 
-See the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how you can help with the project. Details on adding non-English translations to Feather Wiki are included there.
+Weitere Informationen darüber, wie Du bei diesem Projekt mithelfen kannst, findest Du in der Datei [CONTRIBUTING.md](CONTRIBUTING.md). Dort findest Du auch Details zum Hinzufügen von nicht-englischen Übersetzungen zum Feather Wiki.
 
-If you want to support the developer monetarily, you can send one-time donations via <https://buymeacoffee.com/robbieantenesse> or <https://ko-fi.com/robbieantenesse>, or you can use <https://liberapay.com/robbieantenesse> to set up recurring donations. This is absolutely not required, but it's greatly appreciated!
+Wenn Du den Entwickler finanziell unterstützen möchtest, kannst Du einmalige Spenden über <https://buymeacoffee.com/robbieantenesse> oder <https://ko-fi.com/robbieantenesse> senden oder über <https://liberapay.com/robbieantenesse> wiederkehrende Spenden einrichten. Dies ist absolut nicht erforderlich, wird aber sehr geschätzt!
 
-## Development
+## Entwicklung
 
 Feather Wiki uses only a few JavaScript dependencies to function on the front end, but it requires more to develop.
 
