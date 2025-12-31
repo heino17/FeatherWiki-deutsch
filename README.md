@@ -53,55 +53,53 @@ Wenn Du den Entwickler finanziell unterstützen möchtest, kannst Du einmalige S
 
 ## Entwicklung
 
-Feather Wiki uses only a few JavaScript dependencies to function on the front end, but it requires more to develop.
+Feather Wiki benötigt nur wenige JavaScript-Abhängigkeiten, um im Frontend zu funktionieren, aber für die Entwicklung sind mehr erforderlich.
 
-To get your computer set up to develop:
+So richtest DU Deinen Computer für die Entwicklung ein:
 
-1. Install [Git](https://git-scm.com)
-1. Install [Node](https://nodejs.org)
-1. Use a command line or terminal
-1. Clone the git repo with `git clone https://codeberg.org/Alamantus/FeatherWiki.git`
-1. Navigate to your cloned repo `cd FeatherWiki`
-1. Run `npm install`
-1. Run `npm start` and visit http://localhost:3000 in your browser
-1. Start making changes to the JavaScript to update your build—you will need to refresh your browser to see your changes
-  - Note: Changing the CSS doesn't automatically update the build, so you'll need to modify some JS or restart the script to see those changes
+1. [Git](https://git-scm.com) installieren
+1. [Node](https://nodejs.org) installieren
+1. Eine Kommandozeile oder ein Terminal verwenden
+1. Klonen des Git-Repositorys mit `git clone https://codeberg.org/Alamantus/FeatherWiki.git`
+1. Navigiere zu Deinem geklonten Repo `cd FeatherWiki`
+1. `npm install` ausführen
+1. `npm start` ausführen und http://localhost:3000 in Deinem Browser aufrufen
+1. Beginne mit den Änderungen am JavaScript, um Ihren Build zu aktualisieren – Du musst Deinen Browser aktualisieren, um die Änderungen zu sehen.
+  - Hinweis: Durch Ändern des CSS wird der Build nicht automatisch aktualisiert. Du musst also etwas JS ändern oder das Skript neu starten, um die Änderungen zu sehen.
 
-When you're ready to build, simply use the `npm run build` to build Feather Wiki.
+Wenn Du bereit bist zu bauen, verwende einfach `npm run build`, um Feather Wiki zu erstellen.
 
 To test a build, you can use `npm test` to build and serve the Server build on a local http server. The test script will allow
 Feather Wiki to use the "Save Wiki to Server" button—the output gets saved to `develop/put-save.html` if you need
 to check it.
 
-### Details
+### Einzelheiten
 
-Feather Wiki uses a modified version of [Choo](https://choo.io) as its [base JavaScript framework](./nanochoo.js), a subset of [JSON-Compress](https://github.com/Alamantus/JSON-Compress) for minifying JSON output, a customized [pell](https://jaredreich.com/pell/) for its [HTML editor](./helpers/ed.js), and a greatly customized [md.js](https://github.com/thysultan/md.js) for its [Markdown parsing](./helpers/md.js).
+Feather Wiki verwendet eine modifizierte Version von [Choo](https://choo.io) als [Basis-JavaScript-Framework](./nanochoo.js), eine Untergruppe von [JSON-Compress](https://github.com/Alamantus/JSON-Compress) zur Minimierung der JSON-Ausgabe, ein angepasstes [pell](https://jaredreich.com/pell/) für seinen [HTML-Editor](./helpers/ed.js) und ein stark angepasstes [md.js](https://github.com/thysultan/md.js) für seine [Markdown-Parsing](./helpers/md.js).
 
-The overarching goal is to keep Feather Wiki as small as possible while still providing the most important features. Unfortunately, that's a pretty loose and fluid goal, but as long as you keep "as small as possible" in mind, you probably won't go too far astray.
+Das übergeordnete Ziel ist es, Feather Wiki so klein wie möglich zu halten und gleichzeitig die wichtigsten Funktionen bereitzustellen. Leider ist das ein ziemlich vages und schwammiges Ziel, aber solange Sie "so klein wie möglich" im Hinterkopf behalten, werden Sie wahrscheinlich nicht allzu weit daneben liegen.
 
-## License Clarification
+## Lizenzklärung
+Feather Wiki ist ein HTML-Dokument, das eine sich selbst replizierende JavaScript-Anwendung zum Erstellen von Websites im Wiki-Stil enthält, deren Inhalt ebenfalls in der Ausgabe gespeichert wird.  
+Copyright (C) 2022 [Robbie Antenesse](https://robbie.antenesse.net) \<dev@alamantus.com\> 
 
-Feather Wiki is an HTML document containing a self-replicating JavaScript application for creating wiki-style websites whose content is also stored in the output.  
-Copyright (C) 2022 [Robbie Antenesse](https://robbie.antenesse.net) \<dev@alamantus.com\>
+Feather Wiki ist freie Software: Sie können sie unter den Bedingungen der GNU Affero General Public License, 
+wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, 
+entweder gemäß Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren Version.
 
-Feather Wiki is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
+Alle Inhalte, die von einem Benutzer mit einer beliebigen Version von Feather Wiki erstellt wurden, sind
+Eigentum ihres Erstellers. Vom Benutzer erstellte Daten und die replizierten
+Kopien von Feather Wiki, die vom Benutzer erstellte Daten enthalten, können verwendet und
+verbreitet werden, wie es ihr Ersteller für richtig hält. Die GNU Affero General
+Public License gilt für den Code, aus dem die Feather Wiki-Anwendung besteht,
+NICHT jedoch für die von Benutzern von Feather Wiki erstellten Inhalte,
+es sei denn, dies wird vom Benutzer in seinen eigenen Inhalten ausdrücklich angegeben.
 
-Any content created by a user using any version of Feather Wiki is
-the property of its creator. User-created data and the replicated
-copies of Feather Wiki containing user-created data can be used and
-distributed however their creator see fit. The GNU Affero General
-Public License applies to the code that constitutes the Feather Wiki
-application and NOT the content created by users of Feather Wiki
-unless explicitly stated by the user within their own content.
+Feather Wiki wird in der Hoffnung verteilt, dass es nützlich ist,
+jedoch OHNE JEGLICHE GARANTIE, auch ohne die implizite Garantie der
+MARKTGÄNGIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Weitere Informationen finden Sie in der
+GNU Affero General Public License.
 
-Feather Wiki is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
-
-A [copy of the GNU Affero General Public License](https://codeberg.org/Alamantus/FeatherWiki/src/branch/main/LICENSE)
-is included in the source code of Feather Wiki. If not, see
+Eine [Kopie der GNU Affero General Public License](https://codeberg.org/Alamantus/FeatherWiki/src/branch/main/LICENSE)
+ist im Quellcode von Feather Wiki enthalten. Falls nicht, siehe
 https://www.gnu.org/licenses/.
