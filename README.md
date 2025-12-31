@@ -1,7 +1,11 @@
 # Feather Wiki Deutsch
-Die Übersetzung besteht/bestand darin, eine de-DE.json im Ordner /locales zu erzeugen und in's Deutsche zu übersetzen.
-Für den schnellen Überblick hier die original README in deutscher Sprache. 
+Die Übersetzung besteht/bestand darin, eine de-DE.json im Ordner /locales zu erzeugen und in's Deutsche zu übersetzen.  
+Dieses deutschsprachige FeatherWiki (German de_DE) kannst Du hier runterladen: [https://feather.wiki/?page=downloads](https://feather.wiki/?page=downloads)
 
+❤️-liche Grüße und vielen Dank an @Alamantus!  
+(¯`◕‿◕´¯) ♫ ♪ ♫♫ ♪ ♫  
+
+<b>Nachfolgend die originale, unveränderte README in deutscher Sprache. </b>
 
 ## Feather Wiki
 
